@@ -1,0 +1,11 @@
+#!name=YouTube
+#!desc=RemoveYouTubeAds
+
+#[Rule]
+^https:\/\/.+\.googlevideo\.com\/.+&oad url reject-img
+
+#[URL Rewrite]
+ctier=[A-Z] citer=A 302
+
+#[MITM]
+hostname = %APPEND% *.googlevideo.com
